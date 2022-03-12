@@ -2,8 +2,8 @@ def solution(begin, target, words):
     answer = 0
     def cnt_dif(word1, word2):
         cnt=0
-        for x in word1:
-            if x not in word2:
+        for i,x in enumerate(word1):
+            if(x!=word2[i]):
                 cnt+=1
         return cnt
     
@@ -29,7 +29,7 @@ def solution(begin, target, words):
                 if(cnt_dif(x,y)==1):
                     if(y==target):
                         return depth
-                    elif (y not in list1):
+                    else:
                         stack.append(y)
         print(depth, stack, words)
     

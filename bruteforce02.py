@@ -61,7 +61,6 @@ print(ans)
 # availableAnswer = getAllCombination(numbers, [[]], len(numbers))
 
 from itertools import permutations
-
 numbers="123"
 for i in range(len(numbers)+1):
     print(list(map(''.join,permutations(numbers,i))))
